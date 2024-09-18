@@ -9,22 +9,20 @@ namespace ASGC_app
             Console.Write("Enter Student's Name: ");
             string studentName = Console.ReadLine();
 
-            Console.Write("Enter List of Assignment Scores: ");
-            Console.WriteLine("Example: 1 2 3 4 5...");
+            Console.WriteLine("Enter List of Assignment Scores (Example: 1 2 3 4 5...): ");
             Console.Write("Enter List of Assignment Scores: ");
             string assignments = Console.ReadLine();
             List<double> assignmentsScores = assignments.Split(' ').Select(double.Parse).ToList();
 
-            Console.Write("Enter Quiz Scores: ");
-            Console.WriteLine("Example: 1 2 3 4 5...");
+            Console.WriteLine("Enter List of Quizzes Scores (Example: 1 2 3 4 5...): ");
             Console.Write("Enter Quiz Scores: ");
             string quizzes = Console.ReadLine();
             List<double> quizzesScores = quizzes.Split(' ').Select(double.Parse).ToList();
 
             Console.Write("Enter Final Exam Score: ");
-            int finalExamScore = int.Parse(Console.ReadLine());
+            double finalExamScore = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(CalculateWeightedAverage(assignmentsScores, quizzesScores, finalExamScore));
+            DisplayStudentReport(studentName, assignmentsScores, quizzesScores, finalExamScore);
         }
 
         static double CalculateWeightedAverage(List<double> assignmentScores, List<double> quizzesScores, double finalExamScore)
@@ -36,20 +34,53 @@ namespace ASGC_app
             double assignmentAverage = assignmentScores.Average();
             double quizzesAverage = quizzesScores.Average();
             double weightedAverageScore = (assignmentWeight * assignmentAverage) + (quizzesWeight * quizzesAverage) + (finalExamWeight * finalExamScore);
-            Console.WriteLine($"Assignment Average: {assignmentAverage}, Quizzes Average: {quizzesAverage}, Final Exam Score: {finalExamScore}");
             return weightedAverageScore;
         }
 
-        static char AssignLetterGrade()
+        static char AssignLetterGrade(double weightedAverageScore)
         {
-            return 'a';
+            if (weightedAverageScore >= 90 && weightedAverageScore <= 100)
+            {
+                return 'A';
+            }
+            else if (weightedAverageScore >= 80)
+            {
+                return 'B';
+            }
+            else if (weightedAverageScore >= 70)
+            {
+                return 'C';
+            }
+            else if (weightedAverageScore >= 60)
+            {
+                return 'D';
+            }
+            else if (weightedAverageScore <= 59 && weightedAverageScore >= 0)
+            {
+                return 'F';
+            }
+            else
+            {
+                return 'G';
+            }
         }
 
-        static void DisplayStudentReport()
+        static void DisplayStudentReport(string studentName, List<double> assignmentScores, List<double> quizzesScores, double finalExamScore)
         {
+            double weightedAverageScore = CalculateWeightedAverage(assignmentScores, quizzesScores, finalExamScore);
 
+            char LetterGrade = AssignLetterGrade(weightedAverageScore);
+            Console.WriteLine();
+            Console.WriteLine($"Student's Name: {studentName}");
+            Console.Write($"Assignment Scores:");
+            foreach (var i in assignmentScores) Console.Write(i.ToString() + " ");
+            Console.WriteLine();
+            Console.Write($"Quizzes Scores:");
+            foreach (var i in quizzesScores) Console.Write(i.ToString() + " ");
+            Console.WriteLine() ;
+            Console.WriteLine($"Final Exam Score: {finalExamScore}");
+            Console.WriteLine($"Weighted Average: {weightedAverageScore}");
+            Console.WriteLine($"Letter Grade: {LetterGrade}");
         }
     }
-
-
 }
