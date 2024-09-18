@@ -1,0 +1,14 @@
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\obj\Debug\net8.0\ASGC-app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\obj\Debug\net8.0\ASGC-app.AssemblyInfoInputs.cache
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\obj\Debug\net8.0\ASGC-app.AssemblyInfo.cs
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\obj\Debug\net8.0\ASGC-app.csproj.CoreCompileInputs.cache
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\bin\Debug\net8.0\ASGC-app.exe
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\bin\Debug\net8.0\ASGC-app.deps.json
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\bin\Debug\net8.0\ASGC-app.runtimeconfig.json
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\bin\Debug\net8.0\ASGC-app.dll
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\bin\Debug\net8.0\ASGC-app.pdb
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\obj\Debug\net8.0\ASGC-app.dll
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\obj\Debug\net8.0\refint\ASGC-app.dll
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\obj\Debug\net8.0\ASGC-app.pdb
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\obj\Debug\net8.0\ASGC-app.genruntimeconfig.cache
+C:\Users\Ggula\source\repos\ASGC-app\ASGC-app\obj\Debug\net8.0\ref\ASGC-app.dll
