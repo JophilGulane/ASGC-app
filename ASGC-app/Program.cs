@@ -55,13 +55,9 @@ namespace ASGC_app
             {
                 return 'D';
             }
-            else if (weightedAverageScore <= 59 && weightedAverageScore >= 0)
+            else 
             {
                 return 'F';
-            }
-            else
-            {
-                return 'G';
             }
         }
 
