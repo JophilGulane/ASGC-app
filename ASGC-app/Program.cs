@@ -4,25 +4,51 @@ namespace ASGC_app
 {
     internal class Program
     {
+        static string assignments = Console.ReadLine();
+        static string quizzes = Console.ReadLine();
         static void Main(string[] args)
         {
             Console.Write("Enter Student's Name: ");
             string studentName = Console.ReadLine();
 
-            Console.WriteLine("Enter List of Assignment Scores (Example: 1 2 3 4 5...): ");
+            Console.WriteLine("Enter List of Assignment Scores (Example: 25/30 40/40 49/50 5/10 ...): ");
             Console.Write("Enter List of Assignment Scores: ");
-            string assignments = Console.ReadLine();
-            List<double> assignmentsScores = assignments.Split(' ').Select(double.Parse).ToList();
+            assignments = Console.ReadLine();
 
-            Console.WriteLine("Enter List of Quizzes Scores (Example: 1 2 3 4 5...): ");
+            string[] scores = assignments.Split(' ');
+            List<double> assignmentsScores = new List<double>();
+            foreach (string score in scores)
+            {
+                string[] nums = score.Trim().Split('/');
+                double numScore = double.Parse(nums[0]);
+                double numTotal = double.Parse(nums[1]);
+                double calculate = (numScore / numTotal) * 100;
+                assignmentsScores.Add(calculate);
+
+            }
+
+            Console.WriteLine("Enter List of Quizzes Scores (Example: 25/30 40/40 49/50 5/10 ...): ");
             Console.Write("Enter Quiz Scores: ");
-            string quizzes = Console.ReadLine();
-            List<double> quizzesScores = quizzes.Split(' ').Select(double.Parse).ToList();
+            quizzes = Console.ReadLine();
 
-            Console.Write("Enter Final Exam Score: ");
-            double finalExamScore = int.Parse(Console.ReadLine());
+            string[] scoresQuizzes = quizzes.Split(' ');
+            List<double> quizzesScores = new List<double>();
+            foreach (string score in scoresQuizzes)
+            {
+                string[] nums = score.Trim().Split('/');
+                double numScore = double.Parse(nums[0]);
+                double numTotal = double.Parse(nums[1]);
+                double calculate = (numScore / numTotal) * 100;
+                quizzesScores.Add(calculate);
 
-            DisplayStudentReport(studentName, assignmentsScores, quizzesScores, finalExamScore);
+            }
+
+            Console.Write("Enter Final Exam Score (Example: 79/80): ");
+            string scoreFinalExam = Console.ReadLine();
+            string[] finalExamScore = scoreFinalExam.Split('/');
+            double finalExamScores = double.Parse(finalExamScore[0]) / double.Parse(finalExamScore[1]) * 100;
+
+            DisplayStudentReport(studentName, assignmentsScores, quizzesScores, finalExamScores);
         }
 
         static double CalculateWeightedAverage(List<double> assignmentScores, List<double> quizzesScores, double finalExamScore)
@@ -55,7 +81,7 @@ namespace ASGC_app
             {
                 return 'D';
             }
-            else 
+            else
             {
                 return 'F';
             }
@@ -69,11 +95,11 @@ namespace ASGC_app
             Console.WriteLine();
             Console.WriteLine($"Student's Name: {studentName}");
             Console.Write($"Assignment Scores:");
-            foreach (var i in assignmentScores) Console.Write(i.ToString() + " ");
+            Console.WriteLine(assignments);
             Console.WriteLine();
             Console.Write($"Quizzes Scores:");
-            foreach (var i in quizzesScores) Console.Write(i.ToString() + " ");
-            Console.WriteLine() ;
+            Console.WriteLine(quizzes);
+            Console.WriteLine();
             Console.WriteLine($"Final Exam Score: {finalExamScore}");
             Console.WriteLine($"Weighted Average: {weightedAverageScore}");
             Console.WriteLine($"Letter Grade: {LetterGrade}");
