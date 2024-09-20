@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Ggula\\.nuget\\packages\\": {}
+    "C:\\Users\\Von\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ggula\\source\\repos\\ASGC-app\\ASGC-app\\ASGC-app.csproj",
+      "projectUniqueName": "D:\\User\\Von\\Documents\\OOP Drills\\Biin\\ASGC-app\\ASGC-app\\ASGC-app.csproj",
       "projectName": "ASGC-app",
-      "projectPath": "C:\\Users\\Ggula\\source\\repos\\ASGC-app\\ASGC-app\\ASGC-app.csproj",
-      "packagesPath": "C:\\Users\\Ggula\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ggula\\source\\repos\\ASGC-app\\ASGC-app\\obj\\",
+      "projectPath": "D:\\User\\Von\\Documents\\OOP Drills\\Biin\\ASGC-app\\ASGC-app\\ASGC-app.csproj",
+      "packagesPath": "C:\\Users\\Von\\.nuget\\packages\\",
+      "outputPath": "D:\\User\\Von\\Documents\\OOP Drills\\Biin\\ASGC-app\\ASGC-app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ggula\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Von\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -66,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
