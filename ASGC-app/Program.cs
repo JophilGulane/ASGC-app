@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ASGC_app
 {
@@ -93,7 +93,9 @@ namespace ASGC_app
 
             char LetterGrade = AssignLetterGrade(weightedAverageScore);
             Console.WriteLine();
+            Console.WriteLine("<=== Student Information ==>");
             Console.WriteLine($"Student's Name: {studentName}");
+            Console.WriteLine();
             Console.Write($"Assignment Scores:");
             Console.WriteLine(assignments);
             Console.WriteLine();
@@ -101,7 +103,9 @@ namespace ASGC_app
             Console.WriteLine(quizzes);
             Console.WriteLine();
             Console.WriteLine($"Final Exam Score: {finalExamScore}");
+            Console.WriteLine();
             Console.WriteLine($"Weighted Average: {weightedAverageScore}");
+            Console.WriteLine();
             Console.WriteLine($"Letter Grade: {LetterGrade}");
         }
     }
