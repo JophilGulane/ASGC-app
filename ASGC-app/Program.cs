@@ -1,11 +1,11 @@
-﻿using System.Diagnostics.Metrics;
+﻿using System
 
 namespace ASGC_app
 {
     internal class Program
     {
-        static string assignments = Console.ReadLine();
-        static string quizzes = Console.ReadLine();
+        static string assignments;
+        static string quizzes;
         static void Main(string[] args)
         {
             Console.Write("Enter Student's Name: ");
